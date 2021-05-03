@@ -16,7 +16,7 @@ buildscript {
 }
 
 plugins {
-    id("com.diffplug.spotless") version Deps.Plugins.Spotless.version
+    id("com.diffplug.spotless") version Deps.Version.spotless
 }
 
 subprojects {
@@ -59,8 +59,6 @@ subprojects {
             useIR = true
             jvmTarget = "1.8"
             freeCompilerArgs = listOf(
-                "-Xinline-classes",
-                "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
                 "-Xopt-in=kotlin.ExperimentalMultiplatform"
             )
         }

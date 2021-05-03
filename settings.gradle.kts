@@ -1,4 +1,1 @@
-include(
-    ":android",
-    ":shared"
-)
+include(":komol", ":komol-timber")
