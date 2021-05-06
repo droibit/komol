@@ -43,8 +43,8 @@ subprojects {
                         "experimental" to "true"
                     )
                 )
-
         }
+        isEnforceCheck = false
     }
 
     plugins.whenPluginAdded {
