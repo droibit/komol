@@ -1,10 +1,10 @@
 object Deps {
     object Plugins {
-        const val android = "com.android.tools.build:gradle:4.1.3"
+        const val android = "com.android.tools.build:gradle:4.2.0"
         const val daggerHilt = "com.google.dagger:hilt-android-gradle-plugin:${Dagger.version}"
 
         object Kotlin {
-            internal const val version = "1.4.32"
+            internal const val version = "1.5.0"
             const val gradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
         }
     }
