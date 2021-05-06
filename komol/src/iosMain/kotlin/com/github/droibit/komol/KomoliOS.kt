@@ -1,7 +1,7 @@
 package com.github.droibit.komol
 
-import platform.Foundation.NSError
 import kotlin.native.concurrent.freeze
+import platform.Foundation.NSError
 
 fun Komol.v(error: NSError, message: String? = null) {
     Komol.v(error.toThrowable(), message)
@@ -28,6 +28,6 @@ fun Komol.wtf(error: NSError, message: String? = null) {
 }
 
 private fun NSError.toThrowable(): Throwable {
-    return Throwable("${localizedDescription}(${code})")
+    return Throwable("$localizedDescription($code)")
         .freeze()
 }

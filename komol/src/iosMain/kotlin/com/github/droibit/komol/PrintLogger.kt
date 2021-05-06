@@ -1,11 +1,11 @@
 package com.github.droibit.komol
 
+import kotlin.native.concurrent.freeze
 import platform.Foundation.NSCalendar
 import platform.Foundation.NSDate
 import platform.Foundation.NSDateFormatter
 import platform.Foundation.NSGregorianCalendar
 import platform.Foundation.NSLocale
-import kotlin.native.concurrent.freeze
 
 class PrintLogger(
     private val tag: String = "Komol"

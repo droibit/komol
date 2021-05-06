@@ -2,7 +2,7 @@ package com.github.droibit.komol
 
 import kotlin.test.assertContentEquals
 
-class TestRecorder: Komol.Loggable {
+class TestRecorder : Komol.Loggable {
     // Use Reference<T> avoid InvalidMutabilityException on Kotlin/Native.
     private val historiesRef = Reference<List<Log>>(listOf())
 

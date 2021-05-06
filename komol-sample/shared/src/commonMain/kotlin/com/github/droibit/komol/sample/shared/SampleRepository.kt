@@ -2,10 +2,10 @@ package com.github.droibit.komol.sample.shared
 
 import com.chrynan.inject.Inject
 import com.chrynan.inject.Singleton
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import com.github.droibit.komol.Komol
 import kotlin.coroutines.cancellation.CancellationException
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 @Singleton
 class SampleRepository @Inject constructor() {
