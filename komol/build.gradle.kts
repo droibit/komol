@@ -60,6 +60,7 @@ kotlin {
         val androidTest by getting {
             dependencies {
                 implementation(Deps.Test.junit)
+                implementation(Deps.Test.Kotlin.junit)
             }
         }
         val iosMain by getting

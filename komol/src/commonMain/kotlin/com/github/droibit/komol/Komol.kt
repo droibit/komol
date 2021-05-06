@@ -65,6 +65,6 @@ object Komol {
     }
 
     fun interface Loggable {
-        fun log(priority: Komol.LogPriority, message: String?, throwable: Throwable?)
+        fun log(priority: LogPriority, message: String?, throwable: Throwable?)
     }
 }

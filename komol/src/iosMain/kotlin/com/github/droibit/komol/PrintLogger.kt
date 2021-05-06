@@ -17,7 +17,7 @@ class PrintLogger(
         dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
     }
 
-    private val tagPrefix = mapOf(
+    private val tagPrefixes = mapOf(
         Komol.LogPriority.VERBOSE to "V",
         Komol.LogPriority.DEBUG to "D",
         Komol.LogPriority.INFO to "I",
@@ -34,6 +34,6 @@ class PrintLogger(
         val fullMessage = createLogMessage(message, throwable)
             ?: return
         val currentDate = dateFormatter.stringFromDate(NSDate())
-        println("$currentDate ${tagPrefix[priority]}/$tag: $fullMessage")
+        println("$currentDate ${tagPrefixes[priority]}/$tag: $fullMessage")
     }
 }

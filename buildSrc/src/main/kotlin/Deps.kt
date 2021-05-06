@@ -34,6 +34,7 @@ object Deps {
         object Kotlin {
             const val common = "org.jetbrains.kotlin:kotlin-test-common:${Plugins.Kotlin.version}"
             const val annotationsCommon = "org.jetbrains.kotlin:kotlin-test-annotations-common:${Plugins.Kotlin.version}"
+            const val junit = "org.jetbrains.kotlin:kotlin-test-junit:${Plugins.Kotlin.version}"
         }        
     }
 
