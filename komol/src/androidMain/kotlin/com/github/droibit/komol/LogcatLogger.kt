@@ -2,7 +2,7 @@ package com.github.droibit.komol
 
 import android.util.Log
 
-class LogCatLogger(
+class LogcatLogger(
     private val tag: String = "Komol"
 ) : Komol.Loggable {
     override fun log(priority: Komol.LogPriority, message: String?, throwable: Throwable?) {
