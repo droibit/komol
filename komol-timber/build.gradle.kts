@@ -1,3 +1,5 @@
+import java.net.URI
+
 plugins {
     id("com.android.library")
     id("kotlin-android")
@@ -37,6 +39,16 @@ dependencies {
 
 afterEvaluate {
     publishing {
+        repositories {
+            maven {
+                url = URI("https://repo.repsy.io/mvn/droibit/public")
+                credentials {
+                    username = "${project.findProperty("repsy.username")}"
+                    password = "${project.findProperty("repsy.password")}"
+                }
+            }
+        }
+
         publications {
             create<MavenPublication>("release") {
                 from(components.getByName("release"))
@@ -46,6 +58,7 @@ afterEvaluate {
                         license {
                             name.set(Komol.License.name)
                             url.set(Komol.License.url)
+                            distribution.set(Komol.License.distribution)
                         }
                     }
                 }

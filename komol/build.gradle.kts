@@ -1,3 +1,5 @@
+import java.net.URI
+
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
@@ -64,6 +66,16 @@ kotlin {
 }
 
 publishing {
+    repositories {
+        maven {
+            url = URI("https://repo.repsy.io/mvn/droibit/public")
+            credentials {
+                username = "${project.findProperty("repsy.username")}"
+                password = "${project.findProperty("repsy.password")}"
+            }
+        }
+    }
+
     publications {
         create<MavenPublication>("release") {
             pom {
@@ -71,9 +83,14 @@ publishing {
                     license {
                         name.set(Komol.License.name)
                         url.set(Komol.License.url)
+                        distribution.set(Komol.License.distribution)
                     }
                 }
             }
         }
     }
+}
+
+afterEvaluate {
+    println("userName: ${project.findProperty("repsy.username")}")
 }
