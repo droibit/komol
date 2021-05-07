@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-    api(project(":komol"))
+    api(project(":komol-core"))
     api(Deps.timber)
 }
 

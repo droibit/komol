@@ -81,7 +81,7 @@ publishing {
     }
 
     publications {
-        create<MavenPublication>("release") {
+        publications.withType<MavenPublication> {
             pom {
                 licenses {
                     license {
@@ -93,8 +93,4 @@ publishing {
             }
         }
     }
-}
-
-afterEvaluate {
-    println("userName: ${project.findProperty("repsy.username")}")
 }
