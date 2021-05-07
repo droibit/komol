@@ -1,6 +1,5 @@
 plugins {
     kotlin("multiplatform")
-    kotlin("native.cocoapods")
     id("com.android.library")
     id("maven-publish")
 }
@@ -36,17 +35,12 @@ kotlin {
     android {
         publishLibraryVariants("release")
     }
-    ios()
-
-    cocoapods {
-        // Configure fields required by CocoaPods.
-        summary = "A simple logger for Kotlin Multiplatform Mobile."
-        homepage = "https://github.com/droibit/komol"
-        authors = "Shinya Kumagai"
-        license = "Apache License, Version 2.0"
-        frameworkName = "Komol"
-
-        ios.deploymentTarget = "12.0"
+    ios() {
+        binaries {
+            framework {
+                baseName = "Komol"
+            }
+        }
     }
 
     sourceSets {
