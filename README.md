@@ -1,6 +1,55 @@
 # Komol
 
-Komol is a **Ko**tlin Multiplatform **Mo**bile **l**ogger.
+Komol is a simple **Ko**tlin Multiplatform **Mo**bile **l**ogger.  
+Supports the following targets:
+- Android
+- iOS
+
+# Usage
+
+```kotlin
+// Install loggers to Komol only once.
+Komol.initialize( ... /* e.g. TimberLogger()*/ )
+
+// Komol's static function to output log.
+Komol.d("Hello")
+Komol.e(Exception("Error"))
+...
+```
+
+## Build in loggers
+
+### Android
+- `LogcatLogger`: Use [`Log`](https://developer.android.com/reference/android/util/Log) provided by Android SDK to output a log.
+
+```kotlin
+Komol.i("Hello")
+// ->
+// 05-07 20:45:04.123 17643-17643/com.github.droibit.komol.sample I/Komol: Hello
+```
+
+- `TimberLogger`: Use [`Timber`](https://github.com/JakeWharton/timber) to output a log (It requires `komol-timber` separately).
+
+```kotlin
+Komol.i("Hello")
+// ->
+// 05-07 20:45:04.123 17643-17643/com.github.droibit.komol.sample I/SampleApplication: Hello
+```
+
+### iOS
+- `PrintLogger`: Use [`println`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html) function to output a log.
+```kotlin
+Komol.i("Hello")
+// ->
+// 2021-05-07 20:48:39.419 I/Komol: Hello
+```
+
+## Improve calls from Swift
+If you want to use Komol from Swift code, it is recommended to create a wrapper for it.
+- [`komol-sample/Komol.swift`](https://github.com/droibit/komol/blob/master/komol-sample/ios/Sources/Utils/Komol.swift)
+
+# Download
+- `TODO`
 
 # Licenses
 
