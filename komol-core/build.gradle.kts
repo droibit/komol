@@ -39,7 +39,7 @@ android {
 
 kotlin {
     android {
-        publishLibraryVariants("release")
+        publishAllLibraryVariants()
     }
     ios() {
         binaries {
