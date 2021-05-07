@@ -7,11 +7,11 @@ plugins {
 version = "1.0.0"
 
 android {
-    compileSdkVersion(Komol.Config.compileSdkVersion)
+    compileSdkVersion(LibraryConfig.Android.compileSdkVersion)
 
     defaultConfig {
-        minSdkVersion(Komol.Config.minSdkVersion)
-        targetSdkVersion(Komol.Config.targetSdkVersion)
+        minSdkVersion(LibraryConfig.Android.minSdkVersion)
+        targetSdkVersion(LibraryConfig.Android.targetSdkVersion)
         versionCode = 1
         versionName = "1.0"
         consumerProguardFiles("consumer-rules.pro")

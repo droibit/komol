@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Komol.Config.compileSdkVersion)
+    compileSdkVersion(LibraryConfig.Android.compileSdkVersion)
 
     defaultConfig {
         applicationId = "com.github.droibit.komol.sample"
-        minSdkVersion(Komol.Config.minSdkVersion)
-        targetSdkVersion(Komol.Config.targetSdkVersion)
+        minSdkVersion(LibraryConfig.Android.minSdkVersion)
+        targetSdkVersion(LibraryConfig.Android.targetSdkVersion)
         versionCode = 1
         versionName = "1.0"
 

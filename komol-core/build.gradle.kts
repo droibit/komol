@@ -6,16 +6,16 @@ plugins {
     id("maven-publish")
 }
 
-group = Komol.group
-version = Komol.versionName
+group = LibraryConfig.group
+version = LibraryConfig.version
 
 android {
-    compileSdkVersion(Komol.Config.compileSdkVersion)
+    compileSdkVersion(LibraryConfig.Android.compileSdkVersion)
 
     defaultConfig {
-        minSdkVersion(Komol.Config.minSdkVersion)
-        targetSdkVersion(Komol.Config.targetSdkVersion)
-        versionCode = Komol.versionCode
+        minSdkVersion(LibraryConfig.Android.minSdkVersion)
+        targetSdkVersion(LibraryConfig.Android.targetSdkVersion)
+        versionCode = LibraryConfig.Android.versionCode
         versionName = "${project.version}"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -85,9 +85,9 @@ publishing {
             pom {
                 licenses {
                     license {
-                        name.set(Komol.License.name)
-                        url.set(Komol.License.url)
-                        distribution.set(Komol.License.distribution)
+                        name.set(LibraryConfig.License.name)
+                        url.set(LibraryConfig.License.url)
+                        distribution.set(LibraryConfig.License.distribution)
                     }
                 }
             }
