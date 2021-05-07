@@ -3,6 +3,11 @@ object Komol {
     const val versionName = "0.0.1"
     const val versionCode = 1
 
+    object License {
+        const val name = "The Apache License, Version 2.0"
+        const val url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+    }
+
     object Config {
         const val compileSdkVersion = 30
         const val targetSdkVersion = 30

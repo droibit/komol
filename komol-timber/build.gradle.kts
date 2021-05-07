@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("maven-publish")
 }
 
 group = Komol.group
@@ -32,4 +33,23 @@ android {
 dependencies {
     api(project(":komol"))
     api(Deps.timber)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components.getByName("release"))
+
+                pom {
+                    licenses {
+                        license {
+                            name.set(Komol.License.name)
+                            url.set(Komol.License.url)
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

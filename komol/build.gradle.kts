@@ -1,9 +1,8 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
+    id("maven-publish")
 }
 
 group = Komol.group
@@ -34,7 +33,9 @@ android {
 }
 
 kotlin {
-    android()
+    android {
+        publishLibraryVariants("release")
+    }
     ios()
 
     cocoapods {
@@ -65,5 +66,20 @@ kotlin {
         }
         val iosMain by getting
         val iosTest by getting
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            pom {
+                licenses {
+                    license {
+                        name.set(Komol.License.name)
+                        url.set(Komol.License.url)
+                    }
+                }
+            }
+        }
     }
 }
