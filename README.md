@@ -49,7 +49,20 @@ If you want to use Komol from Swift code, it is recommended to create a wrapper 
 - [`komol-sample/Komol.swift`](https://github.com/droibit/komol/blob/master/komol-sample/ios/Sources/Utils/Komol.swift)
 
 # Download
-- `TODO`
+
+```kotlin
+repositories {
+   maven(url = "https://repo.repsy.io/mvn/droibit/public")
+}
+
+dependencies {
+   // For common
+   implementation("com.github.droibit.komol:komol-core:0.0.3")
+
+   // For Android if needed
+   implementation("com.github.droibit.komol:komol-timber:0.0.3")
+}
+```
 
 # Licenses
 
