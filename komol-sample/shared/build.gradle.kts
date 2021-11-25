@@ -39,8 +39,13 @@ kotlin {
         homepage = "https://github.com/droibit/komol"
         authors = "Shinya Kumagai"
         license = "Apache License, Version 2.0"
-        frameworkName = "Shared"
         ios.deploymentTarget = "12.0"
+        podfile = project.file("../ios/Podfile")
+
+        framework {
+            baseName = "Shared"
+            export(project(":komol-core"))
+        }
     }
 
     sourceSets {

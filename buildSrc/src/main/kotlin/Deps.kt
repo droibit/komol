@@ -4,14 +4,14 @@ object Deps {
         const val daggerHilt = "com.google.dagger:hilt-android-gradle-plugin:${Dagger.version}"
 
         object Kotlin {
-            internal const val version = "1.5.0"
+            internal const val version = "1.6.0"
             const val gradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
         }
     }
 
     object Coroutines {
         // Strictly requires `native-mt` version.
-        private const val version = "1.4.3-native-mt!!"
+        private const val version = "1.6.0-RC"
         const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${version}"
         const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
     }

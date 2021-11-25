@@ -9,6 +9,3 @@ fun bootstrap(debuggable: Boolean) {
     }
     Komol.d("Bootstrapped!!")
 }
-
-// TODO: Export `Komol` as Shared.framework.
-fun exportKomol(): Komol = Komol

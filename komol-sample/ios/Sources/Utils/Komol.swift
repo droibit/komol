@@ -2,7 +2,7 @@ import Foundation
 import Shared
 
 enum Komol {
-    private static let komol = Komol_coreKomol()
+    private static let komol = Shared.Komol()
 
     static func v(_ message: String) {
         komol.v(message: message)
