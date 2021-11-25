@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.github.droibit.komol
 
 import android.util.Log
