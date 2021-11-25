@@ -7,13 +7,12 @@ plugins {
 version = "1.0.0"
 
 android {
-    compileSdkVersion(LibraryConfig.Android.compileSdkVersion)
+    compileSdk = LibraryConfig.Android.compileSdk
 
     defaultConfig {
-        minSdkVersion(LibraryConfig.Android.minSdkVersion)
-        targetSdkVersion(LibraryConfig.Android.targetSdkVersion)
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = LibraryConfig.Android.minSdk
+        targetSdk = LibraryConfig.Android.targetSdk
+
         consumerProguardFiles("consumer-rules.pro")
     }
 

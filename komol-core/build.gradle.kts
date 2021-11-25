@@ -10,13 +10,12 @@ group = LibraryConfig.group
 version = LibraryConfig.version
 
 android {
-    compileSdkVersion(LibraryConfig.Android.compileSdkVersion)
+    compileSdk = LibraryConfig.Android.compileSdk
 
     defaultConfig {
-        minSdkVersion(LibraryConfig.Android.minSdkVersion)
-        targetSdkVersion(LibraryConfig.Android.targetSdkVersion)
-        versionCode = LibraryConfig.Android.versionCode
-        versionName = "${project.version}"
+        minSdk = LibraryConfig.Android.minSdk
+        targetSdk = LibraryConfig.Android.targetSdk
+
         consumerProguardFiles("consumer-rules.pro")
     }
 

@@ -9,9 +9,8 @@ object LibraryConfig {
     }
 
     object Android {
-        const val compileSdkVersion = 30
-        const val targetSdkVersion = 30
-        const val minSdkVersion = 21
-        const val versionCode = 1
+        const val compileSdk = 30
+        const val targetSdk = 30
+        const val minSdk = 21
     }
 }

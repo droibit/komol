@@ -6,16 +6,16 @@ plugins {
 }
 
 android {
-    compileSdkVersion(LibraryConfig.Android.compileSdkVersion)
+    compileSdk = LibraryConfig.Android.compileSdk
 
     defaultConfig {
         applicationId = "com.github.droibit.komol.sample"
-        minSdkVersion(LibraryConfig.Android.minSdkVersion)
-        targetSdkVersion(LibraryConfig.Android.targetSdkVersion)
+        minSdk = LibraryConfig.Android.minSdk
+        targetSdk = LibraryConfig.Android.targetSdk
         versionCode = 1
         versionName = "1.0"
 
-        resConfigs("en", "ja")
+        resourceConfigurations.addAll(listOf("en", "ja"))
         vectorDrawables.useSupportLibrary = true
     }
 
