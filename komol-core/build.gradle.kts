@@ -40,13 +40,7 @@ kotlin {
     android {
         publishAllLibraryVariants()
     }
-    ios() {
-        binaries {
-            framework {
-                baseName = "Komol"
-            }
-        }
-    }
+    ios()
 
     sourceSets {
         val commonMain by getting
