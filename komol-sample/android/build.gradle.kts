@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.github.droibit.komol.sample"
-        minSdk = LibraryConfig.Android.minSdk
+        minSdk = 24
         targetSdk = LibraryConfig.Android.targetSdk
         versionCode = 1
         versionName = "1.0"

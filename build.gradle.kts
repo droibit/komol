@@ -52,7 +52,6 @@ subprojects {
 
     tasks.withType(KotlinCompile::class.java) {
         kotlinOptions {
-            useIR = true
             jvmTarget = "1.8"
             freeCompilerArgs = listOf(
                 "-Xopt-in=kotlin.ExperimentalMultiplatform"

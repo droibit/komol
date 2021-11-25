@@ -17,19 +17,19 @@ object Deps {
     }
 
     object Android {
-        const val core = "androidx.core:core-ktx:1.5.0-rc01"
-        const val appcompat = "androidx.appcompat:appcompat:1.3.0-rc01"
-        const val materialDesign = "com.google.android.material:material:1.4.0-alpha02"
+        const val core = "androidx.core:core-ktx:1.7.0"
+        const val appcompat = "androidx.appcompat:appcompat:1.4.0"
+        const val materialDesign = "com.google.android.material:material:1.4.0"
     }
 
     object Dagger {
-        internal const val version = "2.35.1"
+        internal const val version = "2.40.1"
         const val hilt = "com.google.dagger:hilt-android:$version"
         const val compiler = "com.google.dagger:hilt-android-compiler:$version"
     }
 
     object Test {
-        const val junit = "junit:junit:4.13.1"
+        const val junit = "junit:junit:4.13.2"
 
         object Kotlin {
             const val common = "org.jetbrains.kotlin:kotlin-test-common:${Plugins.Kotlin.version}"
@@ -38,8 +38,8 @@ object Deps {
         }        
     }
 
-    const val timber = "com.jakewharton.timber:timber:4.7.1"
-    const val inject = "com.chrynan.inject:inject:0.8.0"
+    const val timber = "com.jakewharton.timber:timber:5.0.1"
+    const val inject = "com.chrynan.inject:inject:1.0.0"
 
     object Version {
         const val spotless = "5.17.1"
