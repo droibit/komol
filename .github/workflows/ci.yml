@@ -10,7 +10,7 @@ jobs:
       with:
         java-version: 11
     - name: Build libraries and sample app
-      run: ./gradlew assembleDebug
+      run: ./gradlew assembleDebug --info
     - name: Run ktlint with spotless
       run: ./gradlew spotlessKotlinCheck
     - name: Run unit tests
