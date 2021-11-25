@@ -42,7 +42,7 @@ object Deps {
     const val inject = "com.chrynan.inject:inject:0.8.0"
 
     object Version {
-        const val spotless = "5.10.1"
-        const val ktlint = "0.40.0"
+        const val spotless = "5.17.1"
+        const val ktlint = "0.43.0"
     }
 }
