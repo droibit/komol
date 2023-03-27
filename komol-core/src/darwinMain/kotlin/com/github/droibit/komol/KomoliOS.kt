@@ -2,6 +2,7 @@
 
 package com.github.droibit.komol
 
+import kotlinx.cinterop.UnsafeNumber
 import platform.Foundation.NSError
 
 fun Komol.v(error: NSError, message: String? = null) {
@@ -28,6 +29,7 @@ fun Komol.wtf(error: NSError, message: String? = null) {
     wtf(error.toThrowable(), message)
 }
 
+@OptIn(UnsafeNumber::class)
 private fun NSError.toThrowable(): Throwable {
     return Throwable("$localizedDescription($code)")
 }

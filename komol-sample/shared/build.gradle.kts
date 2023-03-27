@@ -31,6 +31,9 @@ android {
 kotlin {
     android()
     ios()
+    iosSimulatorArm64()
+    watchos()
+    watchosSimulatorArm64()
 
     cocoapods {
         // Configure fields required by CocoaPods.
@@ -57,5 +60,14 @@ kotlin {
         }
         val androidMain by getting
         val iosMain by getting
+        val iosSimulatorArm64Main by getting {
+            dependsOn(iosMain)
+        }
+        val watchosMain by getting {
+            dependsOn(iosMain)
+        }
+        val watchosSimulatorArm64Main by getting {
+            dependsOn(iosMain)
+        }
     }
 }

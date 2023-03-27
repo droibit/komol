@@ -41,6 +41,9 @@ kotlin {
         publishAllLibraryVariants()
     }
     ios()
+    iosSimulatorArm64()
+    watchos()
+    watchosSimulatorArm64()
 
     sourceSets {
         val commonMain by getting
@@ -51,14 +54,31 @@ kotlin {
             }
         }
         val androidMain by getting
-        val iosMain by getting
+        val androidUnitTest by getting {
+            dependencies {
+                implementation(libs.junit)
+                implementation(libs.kotlin.test.junit)
+            }
+        }
+
+        val darwinMain by creating {
+            dependsOn(commonMain)
+        }
+
+        targets.withType<KotlinNativeTarget>().all {
+            if (konanTarget.family.isAppleFamily) {
+                compilations["main"].defaultSourceSet {
+                    dependsOn(darwinMain)
+                }
+            }
+        }
     }
 }
 
 publishing {
     repositories {
         maven {
-            url = URI("https://repo.repsy.io/mvn/droibit/public")
+            url = uri("https://repo.repsy.io/mvn/droibit/public")
             credentials {
                 username = "${project.findProperty("repsy.username")}"
                 password = "${project.findProperty("repsy.password")}"
