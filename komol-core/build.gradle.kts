@@ -1,13 +1,9 @@
-import java.net.URI
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    id("maven-publish")
 }
-
-group = LibraryConfig.group
-version = LibraryConfig.version
 
 android {
     namespace = "com.github.droibit.komol"
@@ -15,7 +11,6 @@ android {
 
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
-
         consumerProguardFiles("consumer-rules.pro")
     }
 
@@ -32,8 +27,6 @@ android {
             )
         }
     }
-
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 }
 
 kotlin {
@@ -75,28 +68,4 @@ kotlin {
     }
 }
 
-publishing {
-    repositories {
-        maven {
-            url = uri("https://repo.repsy.io/mvn/droibit/public")
-            credentials {
-                username = "${project.findProperty("repsy.username")}"
-                password = "${project.findProperty("repsy.password")}"
-            }
-        }
-    }
-
-    publications {
-        publications.withType<MavenPublication> {
-            pom {
-                licenses {
-                    license {
-                        name.set(LibraryConfig.License.name)
-                        url.set(LibraryConfig.License.url)
-                        distribution.set(LibraryConfig.License.distribution)
-                    }
-                }
-            }
-        }
-    }
-}
+apply(from = "$rootDir/gradle/gradle-mvn-mpp-push.gradle.kts")

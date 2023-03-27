@@ -1,6 +1,6 @@
 name: Komol-Sample
 options:
-  xcodeVersion: "13.0"
+  xcodeVersion: "14.0"
   deploymentTarget:
     iOS:  "14.0"
   developmentLanguage: en
@@ -29,7 +29,6 @@ targets:
         DEVELOPMENT_ASSET_PATHS: "\"Sources/Resources/Preview Content\""
     sources:
       - path: Sources
-    dependencies:
     dependencies:
       - package: CombineSchedulers
     postCompileScripts:

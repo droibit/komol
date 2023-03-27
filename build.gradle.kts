@@ -1,3 +1,5 @@
+@file:Suppress("PropertyName")
+
 import com.android.build.gradle.BasePlugin
 import com.android.build.gradle.BaseExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -9,8 +11,14 @@ plugins {
     alias(libs.plugins.spotless)
 }
 
+val GROUP: String by project
+val VERSION_NAME: String by project
+
 subprojects {
     apply(plugin = "com.diffplug.spotless")
+
+    group = GROUP
+    version = VERSION_NAME
 
     spotless {
         kotlin {
