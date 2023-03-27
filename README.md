@@ -57,10 +57,10 @@ repositories {
 
 dependencies {
    // For common
-   implementation("com.github.droibit.komol:komol-core:0.1.0")
+   implementation("com.github.droibit.komol:komol-core:0.2.0")
 
    // For Android if needed
-   implementation("com.github.droibit.komol:komol-timber:0.1.0")
+   implementation("com.github.droibit.komol:komol-timber:0.2.0")
 }
 ```
 
