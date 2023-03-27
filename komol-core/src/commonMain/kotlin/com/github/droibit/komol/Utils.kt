@@ -1,3 +1,4 @@
+// ktlint-disable filename
 package com.github.droibit.komol
 
 internal fun createLogMessage(message: String?, throwable: Throwable?): String? {

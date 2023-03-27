@@ -10,11 +10,11 @@ group = LibraryConfig.group
 version = LibraryConfig.version
 
 android {
-    compileSdk = LibraryConfig.Android.compileSdk
+    namespace = "com.github.droibit.komol.timber"
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        minSdk = LibraryConfig.Android.minSdk
-        targetSdk = LibraryConfig.Android.targetSdk
+        minSdk = libs.versions.android.minSdk.get().toInt()
 
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -36,7 +36,7 @@ android {
 
 dependencies {
     api(project(":komol-core"))
-    api(Deps.timber)
+    api(libs.timber)
 }
 
 afterEvaluate {

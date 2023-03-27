@@ -47,7 +47,7 @@ class KomolTest {
         recorder.assertValueHistory(
             Log(DEBUG, "debug"),
             Log(DEBUG, null, TestThrowable("error!")),
-            Log(DEBUG, "debug", TestThrowable("error!!")),
+            Log(DEBUG, "debug", TestThrowable("error!!"))
         )
     }
 
@@ -63,7 +63,7 @@ class KomolTest {
         recorder.assertValueHistory(
             Log(INFO, "info"),
             Log(INFO, null, TestThrowable("error!")),
-            Log(INFO, "info", TestThrowable("error!!")),
+            Log(INFO, "info", TestThrowable("error!!"))
         )
     }
 
@@ -79,7 +79,7 @@ class KomolTest {
         recorder.assertValueHistory(
             Log(WARNING, "warning"),
             Log(WARNING, null, TestThrowable("error!")),
-            Log(WARNING, "warning", TestThrowable("error!!")),
+            Log(WARNING, "warning", TestThrowable("error!!"))
         )
     }
 
@@ -95,7 +95,7 @@ class KomolTest {
         recorder.assertValueHistory(
             Log(ERROR, "error"),
             Log(ERROR, null, TestThrowable("error!")),
-            Log(ERROR, "error", TestThrowable("error!!")),
+            Log(ERROR, "error", TestThrowable("error!!"))
         )
     }
 
@@ -111,7 +111,7 @@ class KomolTest {
         recorder.assertValueHistory(
             Log(ASSERT, "assert"),
             Log(ASSERT, null, TestThrowable("error!")),
-            Log(ASSERT, "assert", TestThrowable("error!!")),
+            Log(ASSERT, "assert", TestThrowable("error!!"))
         )
     }
 }

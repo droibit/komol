@@ -1,0 +1,28 @@
+[versions]
+android-gradle-plugin = "7.4.2"
+kotlin = "1.8.10"
+kotlin-coroutines = "1.6.4"
+spotless = "6.17.0"
+ktlint = "0.46.1"
+
+android-compileSdk = "33"
+android-targetSdk = "33"
+android-minSdk = "21"
+
+[libraries]
+kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
+kotlin-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlin-coroutines" }
+androidx-activity = { module = "androidx.activity:activity-ktx", version = "1.7.0" }
+timber = { module = "com.jakewharton.timber:timber", version = "5.0.1" }
+
+junit = { module = "junit:junit", version = "4.13.2" }
+kotlin-test-common = { module = "org.jetbrains.kotlin:kotlin-test-common", version.ref = "kotlin" }
+kotlin-test-annotation-common = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common", version.ref = "kotlin" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
+android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
+kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }

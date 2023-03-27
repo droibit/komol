@@ -1,17 +1,15 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    kotlin("kapt")
-    id("dagger.hilt.android.plugin")
 }
 
 android {
-    compileSdk = LibraryConfig.Android.compileSdk
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.github.droibit.komol.sample"
         minSdk = 24
-        targetSdk = LibraryConfig.Android.targetSdk
+        targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
 
@@ -37,13 +35,7 @@ dependencies {
     implementation(project(":komol-timber"))
     implementation(project(":komol-sample:shared"))
 
-    implementation(Deps.Coroutines.core)
-    implementation(Deps.Coroutines.android)
-
-    implementation(Deps.Android.core)
-    implementation(Deps.Android.appcompat)
-    implementation(Deps.Android.materialDesign)
-
-    implementation(Deps.Dagger.hilt)
-    "kapt"(Deps.Dagger.compiler)
+    implementation(libs.kotlin.coroutines.core)
+    implementation(libs.kotlin.coroutines.android)
+    implementation(libs.androidx.activity)
 }

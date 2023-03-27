@@ -10,11 +10,11 @@ group = LibraryConfig.group
 version = LibraryConfig.version
 
 android {
-    compileSdk = LibraryConfig.Android.compileSdk
+    namespace = "com.github.droibit.komol"
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        minSdk = LibraryConfig.Android.minSdk
-        targetSdk = LibraryConfig.Android.targetSdk
+        minSdk = libs.versions.android.minSdk.get().toInt()
 
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -46,19 +46,12 @@ kotlin {
         val commonMain by getting
         val commonTest by getting {
             dependencies {
-                implementation(Deps.Test.Kotlin.common)
-                implementation(Deps.Test.Kotlin.annotationsCommon)
+                implementation(libs.kotlin.test.common)
+                implementation(libs.kotlin.test.annotation.common)
             }
         }
         val androidMain by getting
-        val androidTest by getting {
-            dependencies {
-                implementation(Deps.Test.junit)
-                implementation(Deps.Test.Kotlin.junit)
-            }
-        }
         val iosMain by getting
-        val iosTest by getting
     }
 }
 

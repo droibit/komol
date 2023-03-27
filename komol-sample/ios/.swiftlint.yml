@@ -8,7 +8,6 @@ disabled_rules:
   - trailing_comma
   - unowned_variable_capture
 opt_in_rules:
-  - anyobject_protocol
   - array_init
   - attributes
   - block_based_kvo

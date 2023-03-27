@@ -1,6 +1,5 @@
 package com.github.droibit.komol
 
-import kotlin.native.concurrent.freeze
 import platform.Foundation.NSCalendar
 import platform.Foundation.NSDate
 import platform.Foundation.NSDateFormatter
@@ -25,10 +24,6 @@ class PrintLogger(
         Komol.LogPriority.ERROR to "E",
         Komol.LogPriority.ASSERT to "A"
     )
-
-    init {
-        freeze()
-    }
 
     override fun log(priority: Komol.LogPriority, message: String?, throwable: Throwable?) {
         val fullMessage = createLogMessage(message, throwable)

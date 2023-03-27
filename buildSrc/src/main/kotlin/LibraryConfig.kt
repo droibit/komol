@@ -7,10 +7,4 @@ object LibraryConfig {
         const val url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
         const val distribution = "repo"
     }
-
-    object Android {
-        const val compileSdk = 31
-        const val targetSdk = 30
-        const val minSdk = 21
-    }
 }

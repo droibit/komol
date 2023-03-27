@@ -7,11 +7,10 @@ plugins {
 version = "1.0.0"
 
 android {
-    compileSdk = LibraryConfig.Android.compileSdk
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        minSdk = LibraryConfig.Android.minSdk
-        targetSdk = LibraryConfig.Android.targetSdk
+        minSdk = libs.versions.android.minSdk.get().toInt()
 
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -53,8 +52,7 @@ kotlin {
             dependencies {
                 api(project(":komol-core"))
 
-                api(Deps.Coroutines.core)
-                implementation(Deps.inject)
+                api(libs.kotlin.coroutines.core)
             }
         }
         val androidMain by getting
